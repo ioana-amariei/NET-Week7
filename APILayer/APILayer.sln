@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APILayer", "APILayer\APILayer.csproj", "{9843F9DC-5161-4D4B-BC09-7C89E3C3154E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{BEA260BA-1145-4BCA-B0A4-447B9C834B6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{CBF98F53-0565-46B3-BB0A-22797B9AEDDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9843F9DC-5161-4D4B-BC09-7C89E3C3154E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9843F9DC-5161-4D4B-BC09-7C89E3C3154E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9843F9DC-5161-4D4B-BC09-7C89E3C3154E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9843F9DC-5161-4D4B-BC09-7C89E3C3154E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA260BA-1145-4BCA-B0A4-447B9C834B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA260BA-1145-4BCA-B0A4-447B9C834B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA260BA-1145-4BCA-B0A4-447B9C834B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA260BA-1145-4BCA-B0A4-447B9C834B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBF98F53-0565-46B3-BB0A-22797B9AEDDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF98F53-0565-46B3-BB0A-22797B9AEDDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF98F53-0565-46B3-BB0A-22797B9AEDDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF98F53-0565-46B3-BB0A-22797B9AEDDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2AB2277-79FC-44A5-A204-799F4590363A}
+	EndGlobalSection
+EndGlobal
