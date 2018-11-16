@@ -24,10 +24,10 @@ namespace APILayer.Controllers
             return Ok(this._repository.GetAll());
         }
 
-        [HttpGet("{id}", Name = "GetById")]
-        public ActionResult<ShoppingCart> Get(Guid id)
+        [HttpGet("{shoppingCartId}", Name = "GetById")]
+        public ActionResult<ShoppingCart> GetById(Guid shoppingCartId)
         {
-            return Ok(this._repository.GetById(id));
+            return Ok(this._repository.GetById(shoppingCartId));
         }
 
         [HttpPost]

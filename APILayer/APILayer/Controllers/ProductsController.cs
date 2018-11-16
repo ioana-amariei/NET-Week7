@@ -21,8 +21,8 @@ namespace APILayer.Controllers
             _repository = repository;
         }
 
-        [HttpGet("{id}", Name = "GetById")]
-        public ActionResult<Product> Get(Guid id)
+        [HttpGet("{id}", Name = "GetByProductId")]
+        public ActionResult<Product> GetById(Guid id)
         {
             if (_repository.Exists(id) == false)
             {
@@ -65,7 +65,7 @@ namespace APILayer.Controllers
             _repository.Create(product);
             _repository.SaveChanges();
 
-            return CreatedAtRoute("GetById", new {id = product.Id}, product);
+            return CreatedAtRoute("GetByProductId", new {id = product.Id}, product);
         }
     }
 }

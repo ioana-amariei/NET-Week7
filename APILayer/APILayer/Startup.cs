@@ -24,7 +24,7 @@ namespace APILayer
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Lab7;Trusted_Connection=True;"));
             services.AddTransient<IProductRepository, ProductRepository>();
-            services.AddTransient<IShoppingCartRepository, ShoppingCardRepository>();
+            services.AddTransient<IShoppingCartRepository, ShoppingCartRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

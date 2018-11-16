@@ -2,9 +2,9 @@
 
 namespace DataLayer
 {
-    public class ApplicationContext : DbContext
+    public sealed class ApplicationContext : DbContext
     {
-        public ApplicationContext()
+        public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
             Database.EnsureCreated();
         }
