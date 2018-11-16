@@ -9,8 +9,9 @@ namespace BusinessLayer
         void Create(ShoppingCart shoppingCart);
         void Update(ShoppingCart shoppingCart);
         void Delete(Guid id);
-        ShoppingCart GeById(Guid id);
+        ShoppingCart GetById(Guid id);
         IReadOnlyList<ShoppingCart> GetAll();
+        Product GetProductByShoppingCart(Guid shoppingCartId, Guid productId);
         void SaveChanges();
         bool Exists(Guid id);
     }

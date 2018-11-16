@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using DataLayer;
 using Microsoft.EntityFrameworkCore;
 
 namespace BusinessLayer
 {
-    public class ShoppingCardRepository
+    public class ShoppingCardRepository : IShoppingCartRepository
     {
         private readonly ApplicationContext _context;
 
@@ -32,7 +31,7 @@ namespace BusinessLayer
             _context.shoppingCarts.Remove(shoppingCart);
         }
 
-        public ShoppingCart GeById(Guid id)
+        public ShoppingCart GetById(Guid id)
         {
             return _context.shoppingCarts.First(p => p.Id == id);
         }
@@ -40,6 +39,21 @@ namespace BusinessLayer
         public IReadOnlyList<ShoppingCart> GetAll()
         {
             return _context.shoppingCarts.ToList();
+        }
+
+        public Product GetProductByShoppingCart(Guid shoppingCartId, Guid productId)
+        {
+            ShoppingCart shoppingCart = GetById(shoppingCartId);
+
+            foreach (Product product in shoppingCart.Products)
+            {
+                if (product.Id == productId)
+                {
+                    return product;
+                }
+            }
+
+            return null;
         }
 
         public void SaveChanges()
