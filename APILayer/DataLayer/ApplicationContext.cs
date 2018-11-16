@@ -25,7 +25,7 @@ namespace DataLayer
             modelBuilder.Entity<ShoppingCart>().Property(sc => sc.Id).IsRequired();
             modelBuilder.Entity<ShoppingCart>().Property(sc => sc.Description).IsRequired().HasMaxLength(30);
 
-            modelBuilder.Entity<ShoppingCart>().Property(sc => sc.Date).IsRequired();
+            //modelBuilder.Entity<ShoppingCart>().Property(sc => sc.Date).IsRequired();
             modelBuilder.Entity<ShoppingCart>().Ignore(sc => sc.Total);
         }
     }

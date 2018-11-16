@@ -16,8 +16,9 @@ namespace BusinessLayer
             _context = context;
         }
 
-        public void Create(Product product)
+        public void Create(Product product, Guid id)
         {
+            product.AttachShoppingCart(id);
             _context.products.Add(product);
         }
 

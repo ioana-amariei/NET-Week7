@@ -53,8 +53,8 @@ namespace APILayer.Controllers
         }
 
 
-        [HttpPost]
-        public ActionResult<Product> Create([FromBody] CreateProductModel createProductModel)
+        [HttpPost("{id}")]
+        public ActionResult<Product> Create([FromBody] CreateProductModel createProductModel, Guid id)
         {
             if (createProductModel == null)
             {
@@ -62,7 +62,7 @@ namespace APILayer.Controllers
             }
 
             Product product = new Product(createProductModel.Name, createProductModel.Price, createProductModel.Pieces);
-            _repository.Create(product);
+            _repository.Create(product, id);
             _repository.SaveChanges();
 
             return CreatedAtRoute("GetByProductId", new {id = product.Id}, product);

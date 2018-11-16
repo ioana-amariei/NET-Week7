@@ -6,7 +6,7 @@ namespace BusinessLayer
 {
     public interface IProductRepository
     {
-        void Create(Product product);
+        void Create(Product product, Guid id);
         void Update(Product product);
         void Delete(Guid id);
         Product GetById(Guid id);
