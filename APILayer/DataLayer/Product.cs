@@ -12,7 +12,7 @@ namespace DataLayer
 
         public Product(String name, Decimal price, int pieces)
         {
-            Id = new Guid();
+            Id = Guid.NewGuid();
             Name = name;
             Price = price;
             Pieces = pieces;
@@ -23,10 +23,8 @@ namespace DataLayer
         public String Name { get; private set; }
         public Decimal Price { get; private set; }
         public int Pieces { get; private set; }
-
         [NotMapped]
         public Decimal Total { get; private set; }
-        //many to many maybe???
         public void AttachShoppingCart(Guid id)
         {
             this.ShoppingCartId = id;

@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BusinessLayer
 {
-    public class ShoppingCardRepository : IShoppingCartRepository
+    public class ShoppingCartRepository : IShoppingCartRepository
     {
         private readonly ApplicationContext _context;
 
-        public ShoppingCardRepository(ApplicationContext context)
+        public ShoppingCartRepository(ApplicationContext context)
         {
             _context = context;
         }
